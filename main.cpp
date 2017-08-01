@@ -87,6 +87,56 @@ main()
   {
       goto keluar;
      }
+     }
+
+    else if(menu==2)
+ {
+  system ("cls");
+     cout<<"\n PENCARIAN DATA MAHASISWA\n";
+     cout<<" ____________________________\n\n";
+     cout<<" Masukan NPM : "; cin>>namedit;
+     cout<<endl;
+
+     for(i=0;i<=npm;i++)
+  {
+      if(namedit==mhs[i].nomor)
+   {
+       cout<<" Data di temukan pada registrasi Mahasiswa ke-"<<i<<endl<<endl;
+        cout<<" Nama Lengkap               : "<<mhs[i].nama<<endl;
+     cout<< endl;
+        cout<<" Fakultas/Prodi             : "<<mhs[i].fakultas<<endl;
+     cout<< endl;
+        cout<<" Periode Daftar             : "<<mhs[i].pd<<endl;
+     cout<< endl;
+        cout<<" Dosen Pembimbing           : "<<mhs[i].dp<<endl;
+     cout<< endl;
+        cout<<" Tempat Lahir               : "<<mhs[i].lahir<<endl;
+     cout<< endl;
+        cout<<" Tanggal Lahir (DD MM TTTT) : "<<mhs[i].tanggal<<endl;
+     cout<< endl;
+        cout<<" Alamat                     : "<<mhs[i].almt<<endl;
+     cout<< endl;
+                cout<<" _____________________________________________________\n\n";
+
+                goto menu0;
+      }
+     }
+     cout<<" DATA YANG ANDA CARI TIDAK DI TEMUKAN !!!\n\n";
+     cout<<" ________________________________________\n\n";
+        menu0:
+     cout<<" 1.Kembali ke Menu Utama\n\n";
+     cout<<" 2.Keluar dari program\n";
+     cout<<" _____________________________\n\n";
+        cout<<" Masukan Pilihan Anda : "; cin>>pilih;
+
+        if(pilih==1)
+  {
+      goto menuutama;
+     }
+     else if(pilih==2)
+  {
+      goto keluar;
+     }
      keluar:
     system("cls");
     cout<<"\n TERIMA KASIH\n";
