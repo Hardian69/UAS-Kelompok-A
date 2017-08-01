@@ -179,6 +179,39 @@ main()
         {
       goto keluar;
      }
+         }
+
+ else if(menu==4)
+ {
+  system ("cls");
+  cout<<"\n MENAMPILKAN DATA MAHASISWA\n";
+  cout<<" _________________________________\n\n";
+        for(i=0;i<=npm;i++)
+  {
+      cout<<" Database Data Mahasiswa ke-"<<i<<endl<<endl;
+      cout<<" NPM             : "<<mhs[i].nomor<<endl<<endl;
+      cout<<" Nama            : "<<mhs[i].nama<<endl<<endl;
+      cout<<" Fakultas/Prodi  : "<<mhs[i].fakultas<<endl<<endl;
+      cout<<" Periode Daftar  : "<<mhs[i].pd<<endl<<endl;
+      cout<<" Dosen Pembimbing: "<<mhs[i].dp<<endl<<endl;
+      cout<<" Tempat Lahir    : "<<mhs[i].lahir<<endl<<endl;
+      cout<<" Tanggal Lahir   : "<<mhs[i].tanggal<<endl<<endl;
+      cout<<" Alamat          : "<<mhs[i].almt<<endl<<endl;
+  }
+  cout<<" _____________________________________________\n\n";
+  cout<<" 1.Kembali ke menu awal\n\n";
+  cout<<" 2.keluar dari program\n";
+  cout<<" _____________________________\n\n";
+        cout<<" Masukan Pilihan Anda : "; cin>>pilih;
+        if(pilih==1)
+  {
+      goto menuutama;
+     }
+     else if(pilih==2)
+  {
+      goto keluar;
+     }
+
      keluar:
     system("cls");
     cout<<"\n TERIMA KASIH\n";
