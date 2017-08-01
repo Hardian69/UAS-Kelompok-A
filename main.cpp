@@ -216,7 +216,7 @@ main()
   else if(menu==5)
  {
   system ("cls");
-  cout<<"\n PENGHAPUSAN DATA PADA DATABASE MAHASISWA\n";
+  cout<<"\n UPDATE DATA PADA DATABASE MAHASISWA\n";
   cout<<" ____________________________________\n\n";
   cout<<" NPM : "; cin>>namedit;
      cout<<endl;
