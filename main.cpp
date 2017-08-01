@@ -137,6 +137,48 @@ main()
   {
       goto keluar;
      }
+     }
+
+ else if(menu==3)
+ {
+  system ("cls");
+  cout<<"\n PENGHAPUSAN DATA PADA DATABASE MAHASISWA\n";
+  cout<<" ____________________________________\n\n";
+  cout<<" NPM : "; cin>>namedit;
+     cout<<endl;
+
+        for(i=0;i<=npm;i++)
+  {
+      if(namedit==mhs[i].nomor)
+   {
+    ketemu=true;
+    if(ketemu)
+    {
+     for(j=i;j<=npm+1;j++)
+     {
+      mhs[j]=mhs[j+1];
+     }
+     cout<<" DATA BERHASIL DI HAPUS\n\n";
+     npm--;
+     goto menu;
+    }
+   }
+  }
+  cout<<" DATA YANG AKAN DI HAPUS TIDAK DITEMUKAN !!!\n";
+  cout<<" ____________________________________________\n\n";
+        menu:
+     cout<<" 1.Kembali ke Menu Utama\n\n";
+     cout<<" 2.Keluar dari program\n";
+     cout<<" _____________________________\n\n";
+        cout<<" Masukan Pilihan Anda : "; cin>>pilih;
+        if(pilih==1)
+  {
+      goto menuutama;
+     }
+     else if(pilih==2)
+        {
+      goto keluar;
+     }
      keluar:
     system("cls");
     cout<<"\n TERIMA KASIH\n";
