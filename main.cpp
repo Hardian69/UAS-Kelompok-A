@@ -26,6 +26,7 @@ main()
     data mhs[20];
     char get[1];
     bool ketemu;
+    int cari=0;
 
 
     menuutama:
@@ -38,7 +39,8 @@ main()
     cout<<" 2.Mencari Data Mahasiswa\n\n";
     cout<<" 3.Menghapus Data Mahasiswa\n\n";
     cout<<" 4.Menampilkan Data Mahasiswa\n\n";
-    cout<<" 5.Keluar\n\n";
+    cout<<" 5.Update Data Mahasiswa\n\n";
+    cout<<" 6.Keluar\n\n";
     cout<<" _____________________________\n\n";
     cout<<" Masukan Pilihan Anda : "; cin>>menu;
 
@@ -210,12 +212,77 @@ main()
   {
       goto keluar;
      }
+ }
+  else if(menu==5)
+ {
+  system ("cls");
+  cout<<"\n UPDATE DATA PADA DATABASE MAHASISWA\n";
+  cout<<" ____________________________________\n\n";
+  cout<<" NPM : "; cin>>namedit;
+     cout<<endl;
+
+        for(i=0;i<=npm;i++)
+  {
+      if(namedit==mhs[i].nomor)
+   {
+       cari=0;
+    cout<<"MASUKAN DATA YANG DI UPDATE\n\n";
+     cout<<" ____________________________\n\n";
+        cout<<" NPM (max 8 karakter)       : ";
+        cin>>mhs[i].nomor; cin.getline(get,1);
+     cout<< endl;
+        cout<<" Nama Lengkap               : ";
+        cin.getline(mhs[i].nama,50);
+     cout<< endl;
+        cout<<" Fakultas/Prodi             : ";
+        cin.getline(mhs[i].fakultas,30);
+     cout<< endl;
+        cout<<" Periode Daftar             : ";
+        cin.getline(mhs[i].pd,20);
+     cout<< endl;
+        cout<<" Dosen Pembimbing           : ";
+        cin.getline(mhs[i].dp,50);
+     cout<< endl;
+        cout<<" Tempat Lahir               : ";
+        cin.getline(mhs[i].lahir,20);
+     cout<< endl;
+        cout<<" Tanggal Lahir (DD MM TTTT) : ";
+        cin.getline(mhs[i].tanggal,20);
+     cout<< endl;
+        cout<<" Alamat                     : ";
+        cin.getline(mhs[i].almt,20);
+     cout<< endl;
+
+    cout<<"DATA BERHASIL DI UPDATE\n\n";
+    break;
+
+   }
+   cari=0;
+  }
+  if (cari==0){
+  cout<<" DATA YANG AKAN DI HAPUS TIDAK DITEMUKAN !!!\n";
+  cout<<" ____________________________________________\n\n";
+  cout<<" _____________________________________________\n\n";
+  }
+  cout<<" 1.Kembali ke menu awal\n\n";
+  cout<<" 2.keluar dari program\n";
+  cout<<" _____________________________\n\n";
+        cout<<" Masukan Pilihan Anda : "; cin>>pilih;
+        if(pilih==1)
+  {
+      goto menuutama;
+     }
+     else if(pilih==2)
+  {
+      goto keluar;
+     }
 
      keluar:
     system("cls");
     cout<<"\n TERIMA KASIH\n";
     getch();
     return 0;
+
     }
 }
 
