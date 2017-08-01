@@ -33,7 +33,7 @@ main()
     system("cls");
 
 
- cout<<" ---------------- Aplikasi Data Mahasiswa ---------------";
+ cout<<" ----------------- Aplikasi Data Mahasiswa ----------------";
     cout <<" \nMENU UTAMA :\n\n";
     cout<<" 1.Menambah Data Mahasiswa\n\n";
     cout<<" 2.Mencari Data Mahasiswa\n\n";
